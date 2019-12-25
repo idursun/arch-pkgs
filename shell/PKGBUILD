@@ -1,0 +1,46 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Your Name <ibrahim.dursun@gmail.com>
+pkgname=idursun-shell
+pkgver=1
+pkgrel=1
+epoch=
+pkgdesc="Shell related packages"
+arch=(any)
+url="https://github.com/idursun/arch-pkgs"
+license=(MIT)
+groups=(idursun)
+depends=(
+    'zsh'
+    'zsh-autosuggestions'
+    'zsh-syntax-highlighting'
+    'termite'
+    'starship-bin'
+    'powerline'
+    'powerline-fonts'
+    'exa'
+    'noto-fonts-emoji'
+    'openssh'
+    )
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=()
+noextract=()
+md5sums=()
+validpgpkeys=()
+
+package() {
+    echo "packaging ${HOME}"
+    # cp -a "$rootdir/files/"* /home/idursun/
+}
