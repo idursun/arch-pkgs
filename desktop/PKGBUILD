@@ -1,9 +1,4 @@
-# This is an example PKGBUILD file. Use this as a start to creating your own,
-# and remove these comments. For more information, see 'man PKGBUILD'.
-# NOTE: Please fill out the license field for your package! If it is unknown,
-# then please put 'unknown'.
-
-# Maintainer: Your Name <ibrahim.dursun@gmail.com>
+# Maintainer: ibrahim dursun <ibrahim.dursun@gmail.com>
 pkgname=idursun-desktop
 pkgver=1
 pkgrel=1
@@ -14,7 +9,8 @@ url="https://github.com/idursun/arch-pkgs"
 license=(MIT)
 groups=(idursun)
 depends=(
-    'lightdm lightdm-gtk-greeter'
+    'lightdm' 
+    'lightdm-gtk-greeter'
     'lightdm-webkit-theme-litarvan'
     'i3-gaps'
     'i3lock'
