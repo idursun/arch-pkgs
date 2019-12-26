@@ -29,11 +29,9 @@ source=(
     termite.config::https://raw.githubusercontent.com/idursun/configs/master/linux-arch/termite/config/termite/config
     init.vim::https://raw.githubusercontent.com/idursun/configs/master/linux-arch/nvim/config/nvim/init.vim
     )
-md5sums=(
-    SKIP
-    SKIP
-    SKIP
-)
+
+for i in $(seq 1 ${#source[@]}); do md5sums+=(SKIP); done
+
 rootdir=$PWD
 
 package() {

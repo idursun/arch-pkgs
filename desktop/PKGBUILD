@@ -35,16 +35,16 @@ conflicts=()
 replaces=()
 backup=()
 source=(
-    ${pkgname}-i3config::https://raw.githubusercontent.com/idursun/configs/master/linux-arch/i3/config/i3/config
+    i3.config::https://raw.githubusercontent.com/idursun/configs/master/linux-arch/i3/config/i3/config
     )
 noextract=()
-md5sums=(
-    SKIP
-    )
+md5sums=()
 validpgpkeys=()
 rootdir=$PWD
 
+for i in $(seq 1 ${#source[@]}); do md5sums+=(SKIP); done
+
 package() {
     cp -a "$rootdir/files/"* "$pkgdir"
-    install -Dm644 -o idursun "$rootdir/$pkgname-i3config" "$pkgdir/home/idursun/.config/i3/config"
+    install -Dm644 -o idursun "$rootdir/i3.config" "$pkgdir/home/idursun/.config/i3/config"
 }
