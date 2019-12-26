@@ -25,15 +25,16 @@ conflicts=()
 replaces=()
 backup=()
 source=(
-    '_zshrc'
-    'termite.config'
+    ${pkgname}-zshrc::https://raw.githubusercontent.com/idursun/configs/master/linux-arch/zsh/home/.zshrc
+    ${pkgname}-termite::https://raw.githubusercontent.com/idursun/configs/master/linux-arch/termite/config/termite/config
     )
 md5sums=(
     SKIP
     SKIP
 )
+rootdir=$PWD
 
 package() {
-    install -D -o idursun -m644 "$srcdir/_zshrc" "$pkgdir/home/idursun/.zshrc"
-    install -D -o idursun -m644 "$srcdir/termite.config" "$pkgdir/home/idursun/.config/termite/config"
+    install -D -o idursun -m644 "$rootdir/$pkgname-zshrc" "$pkgdir/home/idursun/.zshrc"
+    install -D -o idursun -m644 "$rootdir/$pkgname-termite" "$pkgdir/home/idursun/.config/termite/config"
 }
