@@ -14,11 +14,12 @@ depends=(
     'zsh-syntax-highlighting'
     'termite'
     'starship-bin'
+    'exa'
     'powerline'
     'powerline-fonts'
-    'exa'
     'noto-fonts-emoji'
     'openssh'
+    'neovim'
     )
 provides=()
 conflicts=()
