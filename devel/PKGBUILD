@@ -1,0 +1,27 @@
+# Maintainer: ibrahim dursun <ibrahim.dursun@gmail.com>
+pkgname=idursun-devel
+pkgver=1
+pkgrel=1
+epoch=
+pkgdesc="Development packages"
+arch=(any)
+url="https://github.com/idursun/arch-pkgs"
+license=(MIT)
+groups=(idursun)
+depends=(
+    docker
+    dotnet-sdk-bin
+    go
+    jetbrains-toolbox
+    keychain
+    kubectl
+    kubectx
+    nodejs
+    visual-studio-code-bin
+    )
+provides=()
+conflicts=()
+replaces=()
+backup=()
+source=()
+md5sums=()
