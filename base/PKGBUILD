@@ -1,0 +1,27 @@
+# Maintainer: ibrahim dursun <ibrahim.dursun@gmail.com>
+pkgname=idursun-base
+pkgver=1
+pkgrel=1
+epoch=
+pkgdesc="Base packages"
+arch=(any)
+url="https://github.com/idursun/arch-pkgs"
+license=(MIT)
+groups=(idursun)
+depends=(
+    'brightnessctl'
+    'network-manager-applet'
+    'networkmanager'
+    'notification-daemon'
+    'pavucontrol'
+    'feh'
+    )
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+source=()
+noextract=()
+md5sums=()
+validpgpkeys=()
