@@ -20,6 +20,7 @@ depends=(
     'noto-fonts-emoji'
     'openssh'
     'neovim'
+    'vim'
     )
 provides=()
 conflicts=()
