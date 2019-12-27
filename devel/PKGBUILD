@@ -11,6 +11,7 @@ groups=(idursun)
 depends=(
     docker
     dotnet-sdk-bin
+    aspnet-runtime-bin
     go
     jetbrains-toolbox
     keychain
