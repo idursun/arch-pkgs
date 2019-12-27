@@ -9,6 +9,8 @@ url="https://github.com/idursun/arch-pkgs"
 license=(MIT)
 groups=(idursun)
 depends=(
+    git
+    git-delta
     docker
     dotnet-sdk-bin
     aspnet-runtime-bin
@@ -18,6 +20,7 @@ depends=(
     kubectl
     kubectx
     nodejs
+    npm
     visual-studio-code-bin
     )
 provides=()
