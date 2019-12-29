@@ -10,8 +10,8 @@ license=(MIT)
 groups=(idursun)
 depends=(
     'brightnessctl'
-    'network-manager-applet'
     'networkmanager'
+    'network-manager-applet'
     'notification-daemon'
     'pavucontrol'
     'feh'

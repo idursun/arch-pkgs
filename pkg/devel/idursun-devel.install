@@ -1,0 +1,5 @@
+post_install() {
+    systemctl enabel --now docker.service
+    # set core pager to be `git-delta`
+    git config --global core.pager "delta --dark"
+}

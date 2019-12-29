@@ -23,6 +23,7 @@ depends=(
     npm
     visual-studio-code-bin
     )
+install=idursun-devel.install
 provides=()
 conflicts=()
 replaces=()
