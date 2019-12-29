@@ -52,7 +52,7 @@ package_idursun-desktop() {
         'noto-fonts-emoji'
         )
     cp -a "$rootdir/files/"* "$pkgdir"
-    install -Dm644 -o idursun "$rootdir/i3.config" "$pkgdir/home/idursun/.config/i3/config"
+    install -Dm644 "$rootdir/i3.config" "$pkgdir/home/idursun/.config/i3/config"
 }
 
 package_idursun-t495() {

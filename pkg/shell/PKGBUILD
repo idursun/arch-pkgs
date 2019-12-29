@@ -38,7 +38,7 @@ for i in $(seq 1 ${#source[@]}); do md5sums+=(SKIP); done
 rootdir=$PWD
 
 package() {
-    install -D -o idursun -m644 "$rootdir/_zshrc" "$pkgdir/home/idursun/.zshrc"
-    install -D -o idursun -m644 "$rootdir/termite.config" "$pkgdir/home/idursun/.config/termite/config"
-    install -D -o idursun -m644 "$rootdir/init.vim" "$pkgdir/home/idursun/.config/nvim/init.vim"
+    install -D -m644 "$rootdir/_zshrc" "$pkgdir/home/idursun/.zshrc"
+    install -D -m644 "$rootdir/termite.config" "$pkgdir/home/idursun/.config/termite/config"
+    install -D -m644 "$rootdir/init.vim" "$pkgdir/home/idursun/.config/nvim/init.vim"
 }
