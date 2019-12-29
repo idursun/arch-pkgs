@@ -1,5 +1,6 @@
 # Maintainer: ibrahim dursun <ibrahim.dursun@gmail.com>
-pkgname=idursun-desktop
+pkgbase=idursun-desktop
+pkgname=(idursun-desktop idursun-t495 idursun-x230)
 pkgver=1
 pkgrel=1
 epoch=
@@ -8,32 +9,6 @@ arch=(any)
 url="https://github.com/idursun/arch-pkgs"
 license=(MIT)
 groups=(idursun)
-depends=(
-    'lightdm' 
-    'lightdm-gtk-greeter'
-    'lightdm-webkit-theme-litarvan'
-    'i3-gaps'
-    'i3lock'
-    'i3status-rust-bin'
-    'polkit'
-    'dmenu'
-    'brightnessctl'
-    'firefox'
-    'network-manager-applet'
-    'notification-daemon'
-    'pavucontrol'
-    'feh'
-    'xclip'
-    'xf86-video-amdgpu'
-    'xorg-xbacklight'
-    'xorg-xinput'
-    'xorg-xrandr'
-    'powerline'
-    'powerline-fonts'
-    'ttf-dejavu'
-    'ttf-font-awesome-4'
-    'noto-fonts-emoji'
-    )
 install=idursun-desktop.install
 optdepends=(spotify)
 provides=()
@@ -50,7 +25,41 @@ rootdir=$PWD
 
 for i in $(seq 1 ${#source[@]}); do md5sums+=(SKIP); done
 
-package() {
+package_idursun-desktop() {
+    depends=(
+        'lightdm' 
+        'lightdm-gtk-greeter'
+        'lightdm-webkit-theme-litarvan'
+        'i3-gaps'
+        'i3lock'
+        'i3status-rust-bin'
+        'dmenu'
+        'polkit'
+        'brightnessctl'
+        'firefox'
+        'network-manager-applet'
+        'notification-daemon'
+        'pavucontrol'
+        'feh'
+        'xclip'
+        'xorg-xbacklight'
+        'xorg-xinput'
+        'xorg-xrandr'
+        'powerline'
+        'powerline-fonts'
+        'ttf-dejavu'
+        'ttf-font-awesome-4'
+        'noto-fonts-emoji'
+        )
     cp -a "$rootdir/files/"* "$pkgdir"
     install -Dm644 -o idursun "$rootdir/i3.config" "$pkgdir/home/idursun/.config/i3/config"
 }
+
+package_idursun-t495() {
+    depends=('idursun-desktop' 'xf86-video-amdgpu')
+}
+
+package_idursun-x230() {
+    depends=('idursun-desktop' 'xf86-video-intel')
+}
+
