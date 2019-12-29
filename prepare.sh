@@ -5,7 +5,7 @@ PACKAGES=${@:-pkg/*}
 CURDIR=$PWD
 for package in $PACKAGES; do 
     cd ${CURDIR}/$package
-    makepkg
+    makepkg -s
 done
 
 cd $CURDIR
