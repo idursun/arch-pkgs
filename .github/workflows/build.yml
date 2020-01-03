@@ -12,7 +12,7 @@ jobs:
     - name: Docker build
       run: docker build -t arch-base .
     - name: Docker run
-      run: docker run --rm -v "`pwd`":/arch-pkgs arch-base
+      run: docker run --rm -v "$GITHUB_WORKSPACE":/arch-pkgs arch-base
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
